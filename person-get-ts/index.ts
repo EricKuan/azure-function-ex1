@@ -1,4 +1,7 @@
-module.exports = async function (context, req, queryPerson ) {
+import { AzureFunction, Context, HttpRequest } from "@azure/functions"
+
+const httpTrigger: AzureFunction = async function (context: Context, req: HttpRequest, queryPerson: any ): Promise<void> {
+
     context.log('JavaScript queue trigger function processed work item');
     if(!queryPerson){
         context.log("Persion not find!")
@@ -12,4 +15,7 @@ module.exports = async function (context, req, queryPerson ) {
         // status: 200, /* Defaults to 200 */
         body: queryPerson
     };
-}
+
+};
+
+export default httpTrigger;

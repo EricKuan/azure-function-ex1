@@ -1,4 +1,6 @@
-module.exports = function (context) {
+import { AzureFunction, Context } from "@azure/functions"
+
+const httpTrigger: AzureFunction = async function (context: Context): Promise<void> {
     const body = context.req.body;
     context.log(body);
     context.bindings.outputDocument = JSON.stringify({
@@ -10,3 +12,5 @@ module.exports = function (context) {
 
     context.done();
   };
+
+  export default httpTrigger;

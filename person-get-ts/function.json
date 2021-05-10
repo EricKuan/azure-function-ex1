@@ -8,7 +8,7 @@
       "methods": [
         "get"
       ],
-      "route": "persion/{id}"
+      "route": "person/{id}"
     },
     {
       "type": "http",
@@ -21,8 +21,9 @@
       "name": "queryPerson",
       "databaseName": "outDatabase",
       "collectionName": "MyCollection",
-      "connectionStringSetting": "connectionStringSetting",
+      "connectionStringSetting": "CosmosDBConnectString",
       "Id": "{id}"
     }
-  ]
+  ],
+  "scriptFile": "../dist/person-get-ts/index.js"
 }

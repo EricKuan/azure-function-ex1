@@ -22,7 +22,8 @@
       "databaseName": "outDatabase",
       "collectionName": "MyCollection",
       "createIfNotExists": "true",
-      "connectionStringSetting": "connectionStringSetting"
+      "connectionStringSetting": "CosmosDBConnectString"
     }
-  ]
+  ],
+  "scriptFile": "../dist/person-post/index.js"
 }
